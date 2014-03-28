@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <!--提示-->
+      <Title>Code Snippet for region</Title>
+      <!--缩写-->
+      <Shortcut>reg</Shortcut>
+      <!--作者-->
+      <Author>Jun</Author>
+    </Header>
+    <Snippet>
+      <!--生成的代码，Language语言，Delimiter分隔符，$end$结束时光标停放的位置-->
+      <Code Language="CSharp" Delimiter="$">
+        <![CDATA[
+        #region $regionDescription$
+            $end$
+        #endregion
+        ]]>
+      </Code>
+      <Declarations>
+        <!--占位符-->
+        <Literal>
+          <ID>regionDescription</ID>
+          <ToolTip>regionDescription</ToolTip>
+          <Default>描述</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+  <!-- other snippets -->
+</CodeSnippets>

@@ -1,0 +1,25 @@
+﻿<Application x:Class="MVVMLight.Shell.App" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" 
+             xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d1p1:Ignorable="d" 
+             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:MVVMLight.Shell.ViewModels">
+    <!--应用程序资源-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <local:LocalizedStrings xmlns:local="clr-namespace:MVVMLight.Shell" x:Key="LocalizedStrings" />
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Themes/DefaultTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    <Application.ApplicationLifetimeObjects>
+        <!--处理应用程序的生存期事件所需的对象-->
+        <shell:PhoneApplicationService Launching="Application_Launching" Closing="Application_Closing" Activated="Application_Activated" Deactivated="Application_Deactivated" />
+    </Application.ApplicationLifetimeObjects>
+</Application>
